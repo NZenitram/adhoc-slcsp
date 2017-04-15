@@ -9,7 +9,7 @@ module Zips
     self.data['zipcode']
   end
 
-  def self.rate_area
+  def self.rate_areas
     self.data['rate_area']
   end
 

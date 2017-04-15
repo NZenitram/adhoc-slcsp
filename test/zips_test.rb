@@ -16,4 +16,10 @@ class ZipsTest < Minitest::Test
     assert_instance_of Array, zipcodes
     assert_equal "36749", zipcodes[0]
   end
+
+  def test_it_returns_rate_areas
+    data = Zips.rate_areas
+    assert_instance_of Array, data
+    assert_equal "11", data[0]
+  end
 end

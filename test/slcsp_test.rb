@@ -7,12 +7,12 @@ class SlcspTest < Minitest::Test
   end
 
   def test_slcsp_object_contains_data
-    data = Slscp.data
+    data = Slcsp.data
     assert_equal "64148", data.first[0]
   end
 
   def test_slcsp_returns_zipcodes
-    zipcodes = Slscp.zipcodes
+    zipcodes = Slcsp.zipcodes
     assert_instance_of Array, zipcodes
     assert_equal "64148", zipcodes[0]
   end

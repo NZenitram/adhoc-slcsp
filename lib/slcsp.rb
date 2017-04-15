@@ -1,6 +1,6 @@
 require_relative '../lib/csv_reader'
 
-module Slscp
+module Slcsp
   def self.data
     CsvReader.new('./data/slcsp.csv').open_csv
   end
