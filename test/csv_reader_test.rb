@@ -1,6 +1,5 @@
 require_relative 'test_helper'
 require_relative '../lib/csv_reader'
-require 'csv'
 
 class CsvReaderTest < Minitest::Test
   def setup
