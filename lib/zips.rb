@@ -4,4 +4,13 @@ module Zips
   def self.data
     CsvReader.new('./data/zips.csv').open_csv
   end
+
+  def self.zipcodes
+    self.data['zipcode']
+  end
+
+  def self.rate_area
+    self.data['rate_area']
+  end
+
 end
