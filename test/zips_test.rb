@@ -14,6 +14,6 @@ class ZipsTest < Minitest::Test
   def test_zips_returns_zipcodes
     zipcodes = Zips.zipcodes
     assert_instance_of Array, zipcodes
-    assert "36749", zipcodes[0]
+    assert_equal "36749", zipcodes[0]
   end
 end
