@@ -15,7 +15,10 @@ class RateAreasByZipCodeTest < Minitest::Test
   end
 
   def test_it_returns_zipcode_rate_area_pairs
+    data = RateAreasByZipCode.new.zipcode_rate_areas
+    require 'pry', binding.pry
     
+    assert_instance_of Hash, data
   end
 
 end
