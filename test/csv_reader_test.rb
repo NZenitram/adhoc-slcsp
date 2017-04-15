@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 require_relative '../lib/csv_reader'
+require 'csv'
 
 class CsvReaderTest < Minitest::Test
   def setup
@@ -11,10 +12,10 @@ class CsvReaderTest < Minitest::Test
   end
 
   def test_csv_reader_takes_a_file_path
-    assert @csv.file_path, '../data/plans.csv'
+    assert_equal './data/plans.csv', @csv.file_path
   end
 
   def test_csv_reader_opens_csv
-    assert @csv.open_csv, CSV
+    assert_instance_of CSV::Table, @csv.open_csv
   end
 end
