@@ -18,10 +18,10 @@ class RateAreasByZipCode
         match = true
         search_criteria.keys.each do |key|
           match = match && ( row[key] == search_criteria[key] )
-          @matches[zip] = row["rate_area"]          
         end
-        require 'pry', binding.pry
-        match
+        if match
+          @matches[zip] = row['rate_area']
+        end
       end
     end
     @matches
