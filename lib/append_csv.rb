@@ -1,7 +1,6 @@
 require_relative '../lib/rate_areas_by_zipcode.rb'
 require_relative '../lib/match_rate_area_from_plans.rb'
 require 'csv'
-require 'pry'
 
 class AppendCsv
   attr_reader :zips_and_rates
@@ -11,7 +10,7 @@ class AppendCsv
   end
 
   def create_csv
-    CSV.open('./data/slcsp1.csv', 'wb') do |csv|
+    CSV.open('./data/slcsp.csv', 'wb') do |csv|
       csv << ['zipcode', 'rate']
     end
     build_csv
@@ -19,7 +18,7 @@ class AppendCsv
 
   def build_csv
     @zips_and_rates.each do |zip|
-      CSV.open('./data/slcsp1.csv', 'ab') do |csv|
+      CSV.open('./data/slcsp.csv', 'ab') do |csv|
         if zip[1].class == Array
           csv << [zip[0], nil]
         else
