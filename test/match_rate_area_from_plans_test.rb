@@ -8,5 +8,8 @@ class MatchRateAreaFromPlansTest < Minitest::Test
     assert_instance_of Hash, hash
   end
 
-  
+  def test_select_silver_plans
+    plans = MatchRateAreaFromPlans.new.select_silver_plans
+    
+  end
 end
