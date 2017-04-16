@@ -5,7 +5,7 @@ class AppendCsvTest < Minitest::Test
 
   def test_it_initializes_with_data
     data = AppendCsv.new.zips_and_rates
-    assert_equal Hash, data
+    assert_equal Hash, data.class
   end
 
   def  test_it_appends_a_csv_row
