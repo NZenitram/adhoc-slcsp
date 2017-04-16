@@ -26,14 +26,11 @@ class MatchRateAreaFromPlans
         match = true
         match = match && ( row["state"] == rate_area[0] ) && ( rate_area[1] == row["rate_area"] )
         if match
-          @matches[zip] = row['rate']
-        else
-          require 'pry', binding.pry
-          
+          @rate_area_by_zip[zip] = row['rate']
         end
       end
     end
-    @matches
+    @rate_area_by_zip
   end
 
 end
