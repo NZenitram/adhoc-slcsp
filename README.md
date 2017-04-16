@@ -1,6 +1,6 @@
 # Ad-Hoc SLCSP
 
-Ad-Hoc SLCSP is a Ruby program that parses 
+Ad-Hoc SLCSP is a Ruby program that parses provided CSV files to return Silver level healthcare plan rate information for a given zipcode. 
 
 ## Getting Started
 
