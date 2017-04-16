@@ -4,22 +4,19 @@ Ad-Hoc SLCSP is a Ruby program that parses provided CSV files to return Silver l
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get your copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
+Please check your Ruby and Bundler Versions:
 
 ```
 Ruby Version 2.3.0
 Bundler Version 1.14.5
 
 ```
-Run `bundle` in the project directory to install dependancies.
 
 ### Installing
-
-A step by step series of examples that tell you have to get a development env running
 
 Run `bundle` in the project directory to install dependancies.
 
@@ -55,4 +52,4 @@ Fabulous run in 262.476686s, 0.0610 runs/s, 0.0914 assertions/s.
 
 ```
 
-The test suite takes about four and a half minutes to run. This is the result of parsing the CSVs to create data objects that match the required parameters to complete the `slcsp.csv`. A future iteration may include persisting the CSV data in a database, and then parsing the data out using SQL queries. I choose to run everything in pure Ruby deliberately to show that I understand the nuance of the language without using libraries and frameworks. 
+The test suite takes about four and a half minutes to run. This is the result of parsing the CSVs to create data objects that match the required parameters to complete the `slcsp.csv`. A future iteration may include persisting the CSV data in a database, and then parsing the data out using SQL queries. I choose to run everything in pure Ruby deliberately to show that I understand the nuances of the language without using libraries and frameworks.

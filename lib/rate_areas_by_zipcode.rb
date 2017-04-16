@@ -2,14 +2,13 @@ require_relative 'slcsp.rb'
 require_relative 'zips.rb'
 
 class RateAreasByZipCode
-  attr_reader :slcsp_zipcodes, :rate_areas, :matches
-
+  attr_reader :slcsp_zipcodes, :matches
+  # initialize RateAreasByZipCode with Slcsp.csv zipcodes and @matches hash
   def initialize
     @slcsp_zipcodes = Slcsp.zipcodes
     @matches = Hash.new
-    @state = Hash.new
   end
-
+  # find all zipcode data, State and rate area for zipcodes provided in the Slcsp.csv
   def zipcode_rate_areas
     @slcsp_zipcodes.each do |zip|
       search_criteria = { "zipcode" => zip }
@@ -23,5 +22,4 @@ class RateAreasByZipCode
     end
     @matches
   end
-
 end
