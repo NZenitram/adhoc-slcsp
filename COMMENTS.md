@@ -54,3 +54,5 @@ Fabulous run in 262.476686s, 0.0610 runs/s, 0.0914 assertions/s.
 
 
 ```
+
+The test suite takes about four and a half minutes to run. This is the result of parsing the CSVs to create data objects that match the required parameters to complete the `slcsp.csv`. A future iteration may include persisting the CSV data in a database, and then parsing the data out using SQL queries. I choose to run everything in pure Ruby deliberately to show that I understand the nuance of the language without using libraries and frameworks. 
