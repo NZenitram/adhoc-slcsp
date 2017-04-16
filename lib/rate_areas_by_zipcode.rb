@@ -16,9 +16,7 @@ class RateAreasByZipCode
       search_criteria = {"zipcode" => zip}
       Zips.data.find_all do |row|
         match = true
-        search_criteria.keys.each do |key|
-          match = match && ( row[key] == search_criteria[key] )
-        end
+        match = match && ( row["zipcode"] == search_criteria["zipcode"] )
         if match
           @matches[zip] = row['rate_area']
         end
