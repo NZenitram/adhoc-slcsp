@@ -9,16 +9,17 @@ class RateAreasByZipCode
     @slcsp_zipcodes = Slcsp.zipcodes
     @rate_areas = Zips.rate_areas
     @matches = Hash.new
+    @state = Hash.new
   end
 
   def zipcode_rate_areas
     @slcsp_zipcodes.each do |zip|
-      search_criteria = {"zipcode" => zip}
+      search_criteria = { "zipcode" => zip }
       Zips.data.find_all do |row|
         match = true
         match = match && ( row["zipcode"] == search_criteria["zipcode"] )
         if match
-          @matches[zip] = row['rate_area']
+          @matches[zip] = [row['state'], row['rate_area']]
         end
       end
     end

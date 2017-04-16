@@ -15,8 +15,6 @@ class MatchRateAreaFromPlansTest < Minitest::Test
   end
 
   def test_matches_silver_plans
-    plans = MatchRateAreaFromPlans.new.match_silver_plans_by_zip
-    require 'pry', binding.pry
-    
+    plans = MatchRateAreaFromPlans.new.match_silver_plans_by_zip    
   end
 end
