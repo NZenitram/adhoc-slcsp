@@ -7,7 +7,6 @@ class RateAreasByZipCode
 
   def initialize
     @slcsp_zipcodes = Slcsp.zipcodes
-    @rate_areas = Zips.rate_areas
     @matches = Hash.new
     @state = Hash.new
   end

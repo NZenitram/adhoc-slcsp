@@ -15,6 +15,8 @@ class MatchRateAreaFromPlansTest < Minitest::Test
   end
 
   def test_matches_silver_plans
-    plans = MatchRateAreaFromPlans.new.match_silver_plans_by_zip    
+    plans = MatchRateAreaFromPlans.new.match_silver_plans_by_zip
+    assert_equal "64148", plans.first[0]
+    assert_equal "341.24", plans.first[1]
   end
 end

@@ -31,7 +31,6 @@ class MatchRateAreaFromPlans
       end
     end
     @matches
-    require 'pry', binding.pry
   end
 
 end

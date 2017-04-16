@@ -12,7 +12,7 @@ class RateAreasByZipCodeTest < Minitest::Test
   def test_validity_of_the_data
     rate_areas_zipcode = RateAreasByZipCode.new.zipcode_rate_areas
     assert_equal "64148", rate_areas_zipcode.first[0]
-    assert_equal "3", rate_areas_zipcode.first[1]
+    assert_equal "3", rate_areas_zipcode.first[1][1]
   end
 
 end
