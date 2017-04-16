@@ -1,4 +1,4 @@
-
+require_relative 'plans.rb'
 require_relative '../lib/rate_areas_by_zipcode.rb'
 
 class MatchRateAreaFromPlans
@@ -27,6 +27,9 @@ class MatchRateAreaFromPlans
         match = match && ( row["state"] == rate_area[0] ) && ( rate_area[1] == row["rate_area"] )
         if match
           @matches[zip] = row['rate']
+        else
+          require 'pry', binding.pry
+          
         end
       end
     end

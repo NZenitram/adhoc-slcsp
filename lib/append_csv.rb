@@ -10,14 +10,16 @@ class AppendCsv
   end
 
   def create_csv
-    CSV.open('./data/slcsp1.csv', 'wb', headers: true) do |csv|
+    CSV.open('./data/slcsp1.csv', 'wb') do |csv|
       csv << ['zipcode', 'rate']
     end
+    build_csv
   end
 
   def build_csv
     @zips_and_rates.each do |zip|
-      CSV.open('./data/slcsp1.csv', 'wb', headers: true) do |csv|
+      CSV.open('./data/slcsp1.csv', 'ab') do |csv|
+        require 'pry', binding.pry
         csv << [zip[0], zip[1]]
       end
     end

@@ -9,6 +9,6 @@ class AppendCsvTest < Minitest::Test
   end
 
   def  test_it_appends_a_csv_row
-    data = AppendCsv.new.build_csv
+    data = AppendCsv.new.create_csv
   end
 end
